@@ -1,0 +1,308 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+//#include "afxres.h"
+#include "winres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+
+IDI_ICON2               ICON                    "icon2.ico"
+
+IDI_ICON3               ICON                    "icon3.ico"
+
+IDI_ICON4               ICON                    "icon4.ico"
+
+IDI_ICON5               ICON                    "icon5.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 179, 128
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CloseExp"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "全て閉じる",IDOK,123,13,50,14
+    PUSHBUTTON      "キャンセル",IDCHHIDE,123,27,50,14
+    CONTROL         "&Explorerウインドウ",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,17,69,10
+    CONTROL         "Edge/&Chrome",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,27,67,10
+    CONTROL         "&Firefox",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,37,65,10
+    GROUPBOX        "対象ウインドウ",IDC_STATIC_MW,7,6,113,101
+    LTEXT           ".",IDC_STATIC_VER,148,44,25,8,SS_NOTIFY,WS_EX_RIGHT
+    CONTROL         "一番上の対象ウインドウは閉じない。(&T)",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,111,129,10
+    CONTROL         "clip",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | BS_ICON | BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,164,2,9,9
+    RTEXT           "-",IDC_STATIC_NEX,94,18,18,8
+    RTEXT           "-",IDC_STATIC_NIE,94,28,18,8
+    RTEXT           "-",IDC_STATIC_NNN,94,38,18,8
+    CONTROL         "other01",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,52,86,10
+    RTEXT           "-",IDC_STATIC_NNN2,94,53,18,8
+    CONTROL         "other01",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,62,86,10
+    RTEXT           "-",IDC_STATIC_NNN3,94,64,18,8
+    CONTROL         "other01",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,72,86,10
+    RTEXT           "-",IDC_STATIC_NNN4,94,73,18,8
+    CONTROL         "other01",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,82,86,10
+    RTEXT           "-",IDC_STATIC_NNN5,94,84,18,8
+    CONTROL         "other01",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,92,86,10
+    RTEXT           "-",IDC_STATIC_NNN6,94,93,18,8
+    PUSHBUTTON      "編集...",IDC_BUTTON_EDIT,123,88,50,14
+    ICON            IDI_ICON4,IDC_STATIC_PULL,123,50,20,20,SS_NOTIFY | SS_REALSIZEIMAGE
+    ICON            IDI_ICON5,IDC_STATIC_PUSH,147,50,20,20,SS_NOTIFY | SS_REALSIZEIMAGE
+    CONTROL         "ヘルプ",IDC_CUSTOM_VERSION,"KNOHLinkClass",WS_TABSTOP,125,2,35,10
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 255, 299
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CloseExp - ようこそ"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "閉じる",IDOK,198,278,50,14
+    ICON            IDI_ICON1,IDC_STATIC,9,9,20,20,0,WS_EX_STATICEDGE
+    LTEXT           " このソフトを使用するには、タスクトレイ上のアイコンを左クリックします。\r\n 右クリックでメニューが表示されます。",IDC_STATIC,98,80,140,29,0,WS_EX_STATICEDGE
+    CONTROL         IDB_BITMAP1,IDC_STATIC,"Static",SS_BITMAP,16,80,77,29
+    GROUPBOX        "メインウインドウの表示方法",IDC_STATIC,7,65,241,63
+    GROUPBOX        "ショートカットキー選択",IDC_STATIC,7,133,241,123
+    LTEXT           "メインウインドウを表示\t\t\t[Alt]+[Shift]+[Ctrl] + [W]",IDC_STATIC,25,166,212,8
+    LTEXT           "Explorerウインドウを全て閉じる\t\t[Alt]+[Shift]+[Ctrl] + [E]",IDC_STATIC,25,178,212,8
+    LTEXT           "Edge/Chromeを全て閉じる\t\t[Alt]+[Shift]+[Ctrl] + [C]",IDC_STATIC,25,188,212,8
+    LTEXT           "FireFoxを全て閉じる\t\t\t[Alt]+[Shift]+[Ctrl] + [F]",IDC_STATIC,25,198,212,8
+    LTEXT           "・CloseExpが起動している間、下記の機能が使用できます。",IDC_STATIC,14,47,225,12
+    CONTROL         IDB_BITMAP2,IDC_STATIC,"Static",SS_BITMAP,7,35,233,1
+    LTEXT           "CloseExp  Version",IDC_STATIC_VERSION,37,15,211,8
+    LTEXT           "メインウインドウで、値の設定のみを行う場合は[Ctrl]キーを押します。",IDC_STATIC,7,263,235,8
+    PUSHBUTTON      "スタートアップ項目に登録...",IDC_REG_STARTMENU,7,278,85,14
+    CONTROL         "非常駐モードで使用する （次回起動時から有効）",IDC_CHECK_NOBACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,113,191,10
+    CONTROL         "標準モード",IDC_RADIO_HMODE1,"Button",BS_AUTORADIOBUTTON,14,150,47,10
+    CONTROL         "メインのみ",IDC_RADIO_HMODE2,"Button",BS_AUTORADIOBUTTON,14,218,61,10
+    LTEXT           "メインウインドウを表示\t\t\t[Alt]+[Shift]+[Ctrl] + [W]",IDC_STATIC,24,234,212,8
+END
+
+IDD_DIALOGSETTING DIALOGEX 0, 0, 173, 119
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CloseExp - 設定"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,116,98,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,62,98,50,14
+    CONTROL         "非常駐モードで使用する",IDC_CHECK_NOBACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,25,94,8
+    EDITTEXT        IDC_EDIT_WAITTIME,15,64,16,14,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    LTEXT           "ミリ秒 (0～200)       *デフォルト=50ms",IDC_STATIC,35,67,113,8
+    GROUPBOX        "1個ウインドウを閉じた後の待ち時間",IDC_STATIC,7,51,159,33
+    GROUPBOX        "起動オプション",IDC_STATIC,7,7,159,36
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 121
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 292
+    END
+
+    IDD_DIALOGSETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 166
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "Comments", "設定した条件で不要なウインドウを全て閉じます。"
+            VALUE "CompanyName", "L'sRelief"
+            VALUE "FileDescription", "CloseExp"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "CloseExp"
+            VALUE "LegalCopyright", "Copyright (C) 2000-2001 RyusukeHotta"
+            VALUE "OriginalFilename", "CloseExp.exe"
+            VALUE "ProductName", "CloseExp"
+            VALUE "ProductVersion", "2, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "jp"
+    BEGIN
+        MENUITEM "CloseExpの終了",                 ID_MENU_EXIT
+        MENUITEM "CloseExpについて...",             ID_MENU_ABOUT
+        MENUITEM "メインウインドウを開く\tWin+W",          ID_MEN_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "現在の設定ですべて最小化",                ID_MENU_RUN_MIN
+        MENUITEM "現在の設定で全て閉じる",                 ID_MENU_RUN_CLS
+        MENUITEM SEPARATOR
+        MENUITEM "一番上のウインドウは閉じない",              ID_MENU_KEEP1ST
+        MENUITEM "Explorerウインドウを全て閉じる\tWin+Ctrl+W", ID_MENU_CLOSEEX
+        MENUITEM "Internet Explorerを全て閉じる\tWin+Alt+W", ID_MENU_CLOSEIE
+        MENUITEM "Mozilla Firefoxを全て閉じる\tWin+Shift+W", ID_MENUCLOSENN
+        MENUITEM SEPARATOR
+        MENUITEM "オプション...",                    ID_MENUITEMSETTING
+        MENUITEM SEPARATOR
+        MENUITEM "キャンセル",                       ID_MENUITEM40008
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "bitmap1.bmp"
+
+IDB_BITMAP2             BITMAP                  "bitmap2.bmp"
+
+IDB_BITMAP3             BITMAP                  "bitmap3.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "CLExp.exe.manifest"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG1 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_DLG_MAIN_TITLE      "CloseExp"
+    IDS_STRING_RUNSTR       "実行中..."
+    IDS_STRING_CLOSE        "全て閉じる"
+    IDS_STRING_CANCEL       "キャンセル"
+    IDS_STRING_ONLYSET      "設定のみ"
+    IDS_STRING_ALLMINI      "全て最小化"
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
