@@ -48,7 +48,7 @@
 #define MAX_APPEND_ITEMS	5			//追加アイテム数は5個
 
 #define VERSION_CLEXP_MJ	2			//バージョン整数
-#define VERSION_CLEXP_MM	5
+#define VERSION_CLEXP_MM	6
 #define VERSION_CLEXP_CH	""			//バージョン付加文字列
 
 #define MODE_HOTKEY_NORMAL	0			//ホットキーモード
@@ -58,14 +58,14 @@
 #define STR_CLEXP_CLASS		"CloseExpDummy"	//CLass
 #define STR_CLEXP_WINTEXT	"CLSEXPDMMY"	//WindowText
 
-#define STR_DATE			"2022/12/28"//バージョン文字列
+#define STR_DATE			"2022/12/30"//バージョン文字列
 #define STR_VERSION			"CloseExp  Version %d.%d%s   (c)2001-2022 R.HOTTA   %s"
 
 //#define STR_CLOSING			"実行中..."
 
 #define STR_INIFILE			"clexp.ini"	//設定保存ファイル
 #define STR_TARGET			"target.ini"
-#define STR_FN_LINK			"mklnk.exe"
+#define STR_FN_LINK			"AutoRunRegister.exe"
 
 #define STR_FALSE			"false"
 #define STR_TRUE			"true"

@@ -120,7 +120,7 @@ BEGIN
     CONTROL         IDB_BITMAP2,IDC_STATIC,"Static",SS_BITMAP,7,35,233,1
     LTEXT           "CloseExp  Version",IDC_STATIC_VERSION,37,15,211,8
     LTEXT           "メインウインドウで、値の設定のみを行う場合は[Ctrl]キーを押します。",IDC_STATIC,7,263,235,8
-    PUSHBUTTON      "スタートアップ項目に登録...",IDC_REG_STARTMENU,7,278,85,14
+    PUSHBUTTON      "自動起動に登録...",IDC_REG_STARTMENU,7,278,85,14
     CONTROL         "非常駐モードで使用する （次回起動時から有効）",IDC_CHECK_NOBACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,113,191,10
     CONTROL         "標準モード",IDC_RADIO_HMODE1,"Button",BS_AUTORADIOBUTTON,14,150,47,10
     CONTROL         "メインのみ",IDC_RADIO_HMODE2,"Button",BS_AUTORADIOBUTTON,14,218,61,10
