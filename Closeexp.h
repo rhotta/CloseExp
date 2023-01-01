@@ -48,7 +48,7 @@
 #define MAX_APPEND_ITEMS	5			//追加アイテム数は5個
 
 #define VERSION_CLEXP_MJ	2			//バージョン整数
-#define VERSION_CLEXP_MM	6
+#define VERSION_CLEXP_MM	7
 #define VERSION_CLEXP_CH	""			//バージョン付加文字列
 
 #define MODE_HOTKEY_NORMAL	0			//ホットキーモード

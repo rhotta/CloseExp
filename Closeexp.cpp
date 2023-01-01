@@ -15,27 +15,22 @@
 
 #include <windows.h>
 #include <shlobj.h>
+#include <psapi.h>
+
 #include "c_win.h"
 #include "c_path.h"
 #include "c_ctrl_hlink.h"
 #include "resource.h"
 #include "closeexp.h"
 
-/*##############################################################################
-  マクロ
-##############################################################################*/
-#define DO_CLOSEEXP								\
-		if(!m_bCountOnly && !fClosed) {			\
-			fClosed = TRUE;						\
-			if(m_bKeep1st){						\
-				m_bKeep1st = FALSE;				\
-			}else{								\
-				if(m_bMinisize)						\
-				     this->MinisizeWindow(hwnd);	\
-				else this->CloseWindow(hwnd);		\
-				Sleep(m_tagSetting.iSleepTime);	\
-			}									\
-		}
+
+//後方から文字列を比較
+int strcmp_behind(const char* shorterstring, const char* longerstring)
+{
+	const char* p = longerstring + (strlen(longerstring) - strlen(shorterstring));
+	return strcmp(shorterstring, p);
+}
+
 
 /*##############################################################################
   グローバル
@@ -663,7 +658,7 @@ C_CloseExp::IsFirefox(HWND hwnd,const LPSTR szClassName,const LPSTR szWindowName
 // NNであるかどうかのﾁｪｯｸ
 /*//////////////////////////////////////////////////////////////////////
 BOOL
-C_CloseExp::IsEdgeOrChrome(HWND hwnd,const LPSTR szClassName,const LPSTR szWindowName)
+C_CloseExp::IsEdgeOrChrome(HWND hwnd, const LPSTR szClassName, const LPSTR szWindowName)
 {
 
 	if (::strcoll("Chrome_WidgetWin_1", szClassName) == 0) {
@@ -673,7 +668,28 @@ C_CloseExp::IsEdgeOrChrome(HWND hwnd,const LPSTR szClassName,const LPSTR szWindo
 		if (::strcoll("Tray Assistant", szWindowName) == 0) { //GoogleChromeの常駐トレイ
 			return FALSE;
 		}
-		return TRUE;
+
+		DWORD dwProcessId;
+		GetWindowThreadProcessId(hwnd, &dwProcessId);
+		char lpszFileName[4096] = "";
+
+		const HANDLE hProcess = OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, FALSE, dwProcessId);
+		if (hProcess == NULL)
+		{
+			return FALSE;
+		}
+		const DWORD length = GetModuleFileNameExA(hProcess, NULL, lpszFileName, sizeof(lpszFileName));
+		CloseHandle(hProcess);
+
+
+		if (strcmp_behind("chrome.exe", lpszFileName) == 0
+			|| strcmp_behind("msedge.exe", lpszFileName) == 0)
+		{
+
+			return TRUE;
+		}
+
+		return FALSE;
 	}
 
 	return FALSE;
